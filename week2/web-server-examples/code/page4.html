@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html language=”en”>
+  <head>
+    <meta charset=“utf-8”>
+    <title>Hello</title>
+    <style>
+    p {
+        color: blue; /*a comment */
+        margin: 10px;
+        font: 14px Tahoma;
+    }
+    </style>
+    <script>
+        function showDate() {
+           document.getElementById('datefield').innerHTML = Date()
+        }
+    </script>
+  </head>
+  <body>
+        <div>
+          <p>Hello, Web</p>
+        </div>
+        <div id="main">
+            <!-- this is a comment -->
+            This is text without a tag.
+            <button     onclick="showDate()" class="mini">press me</button>
+        </div>
+        <div><p id="datefield"></p></div>
+  </body>
+</html>

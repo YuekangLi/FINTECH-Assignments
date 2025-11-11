@@ -1,0 +1,48 @@
+h1 {
+    color: #003087;
+    size: 20px;
+}
+
+a {
+    color: #003087;
+}
+
+body {
+    margin: 0px;
+}
+
+.topelement {
+    margin: 50px 40px 0px 40px;
+}
+
+.bottomelement {
+    margin: 0px 40px 120px 40px;
+}
+
+.pageelement {
+    margin: 100px 10px 120px 10px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    max-width: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    max-width: none;
+}
+
+#myChart {
+    width: 800px; 
+    height: 400px;
+    margin: 10px;
+}

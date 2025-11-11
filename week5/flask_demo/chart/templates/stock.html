@@ -1,0 +1,38 @@
+{% include 'header.html' %} 
+<div class="pageelement">
+{% with messages = get_flashed_messages(category_filter="error") %}
+  {% if messages %}
+  
+  <div class="container-fluid">
+    <div class="alert alert-warning" role="alert">
+    {% for  message in messages %}
+      {{ message }}<br>
+    {% endfor %}
+    </div>
+  </div>
+
+  {% endif %}
+{% endwith %}
+  <div class="row">
+    <div class="form-group row">
+        <label for="symbol" class="col-sm-1 col-form-label d-flex justify-content-end align-items-end">Stock Symbol</label>
+        <div class="col-sm-1">
+          <input type="text" class="form-control" id="symbol" placeholder="symbol" value="{{ page_data['inputValue']}}">
+        </div>
+         <div class="col-sm-1">
+          <button id="retrieve" class="btn btn-primary">Retrieve</button>
+        </div>
+      </div>
+  </div>
+
+  {% if symbol is defined %}
+  <input type="hidden" id="submittedSymbol" name="submittedSymbol" value="{{symbol}}">
+  <div id="myChart">
+  </div>
+  {% endif %}
+
+</div>
+<!-- needs to occur before loading the footer as the footer closes off the html page -->
+<script src="{{url_for('static', filename='includes/stock.js')}}" </script></script>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+{% include 'footer.html' %}

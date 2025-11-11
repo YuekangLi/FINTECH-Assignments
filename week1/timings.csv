@@ -1,0 +1,5 @@
+# Format: netid, week, Activity (Read/Watch/Do/Coding/...), title, time in minutes (e.g. 2 hours and 45 minutes would be recorded as 165)
+# header: netid, week, task, title, minutes
+# example row: abc123, week1, answer, questions, 35 
+
+
